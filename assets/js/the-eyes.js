@@ -1,14 +1,26 @@
 'use strict';
+const eye = document.querySelector('.js__eye');
+const eyeball = document.querySelector('.js__eyeball');
+const timerMS = 1200;
 
-var balls = document.querySelectorAll('.js__eye');
 
-document.onmousemove = function() {
-	var x = event.clientX * 100 / window.innerWidth + '%';
-	var y = event.clientY * 100 / window.innerHeight + '%';
+function lookAtTheCursor() {
+	const x = event.clientX * 100 / window.innerWidth + '%';
+	const y = event.clientY * 100 / window.innerHeight + '%';
 
-	for (var i=0;i<balls.length;i++) {
-		balls[i].style.left = x;
-		balls[i].style.top = y;
-		balls[i].style.transform = `translate(-${x}, -${y})`;
-	}
-};
+	eyeball.style.left = x;
+	eyeball.style.top = y;
+	eyeball.style.transform = `translate(-${x}, -${y})`;
+}
+
+function blinkTheEye() {
+	eye.classList.add('the-eyes__eye--blinking');
+	setTimeout(() => {
+		eye.classList.remove('the-eyes__eye--blinking');
+		blinking = setTimeout(blinkTheEye, 3000);
+	}, timerMS);
+
+}
+
+document.addEventListener('mousemove', lookAtTheCursor);
+let blinking = setTimeout(blinkTheEye, 3000);
