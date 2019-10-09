@@ -10,52 +10,58 @@
 	background: url(../img/the-eyes.svg) center center no-repeat #ffffff;
 	height: 369px;
 	position: relative;
-	transform: scale(.5);
 	width: 408px;
+	transform: scale(.5);
 }
-.the-eyes__container {
-	background: red;
+.the-eyes__eye {
+	background: white;
+	border-radius: 100%;
+	height: 72px;
+	left: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: 51%;
+	transform: translate(-50%, -50%);
+	width: 110px;
+}
+.the-eyes__eye--blinking {
+	animation-name: blinking;
+	animation-duration: 1200ms;
+	animation-iteration-count: 1;
+}
+.the-eyes__eyeball {
 	height: 72px;
 	left: 50%;
 	position: absolute;
 	top: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%,-50%);
 	width: 110px;
 }
-.the-eyes__part {
-	height: 50%;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	width: 100%;
-}
-.the-eyes__part-top {
-	background: blue;
-	bottom: 50%;
-}
-.the-eyes__part-bottom {
-	background: yellow;
-	top: 50%;
-}
-
-.the-eyes__eye {
-	background: cyan;
+.the-eyes__eyeball-item {
+	background: #2c2c2c;
 	border-radius: 50%;
-	height: 200%;
-	left: 0;
+	height: 42px;
+	left: 50%;
 	position: absolute;
-	transition: height ease .3s;
-	width: 100%;
-}
-.the-eyes__part-top .the-eyes__eye {
-	bottom: -50%;
-	transform: translateY(25%);
-}
-.the-eyes__part-bottom .the-eyes__eye {
-	top: -50%;
-	transform: translateY(-25%);
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 42px;
 }
 
-.the-eyes:hover .the-eyes__eye {
-	height: 50%;
+@keyframes blinking {
+  0% {
+    height: 72px;
+  }
+  15% {
+    height: 0;
+	}
+	35% {
+    height: 72px;
+	}
+	55% {
+		height: 0px;
+	}
+	100% {
+		height: 72px;
+	}
 }
