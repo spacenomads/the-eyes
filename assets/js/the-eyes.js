@@ -27,7 +27,6 @@ function lookAtTheCursor() {
 	const x = (event.clientX * 100 / window.innerWidth) + xFix + '%';
 	const y = (event.clientY * 100 / window.innerHeight) + yFix + '%';
 
-
 	eyeball.style.left = x;
 	eyeball.style.top = y;
 	eyeball.style.transform = `translate(-${x}, -${y})`;

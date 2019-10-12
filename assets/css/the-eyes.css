@@ -10,25 +10,36 @@
 	background: url(../img/the-eyes.svg) center center no-repeat #ffffff;
 	height: 369px;
 	position: relative;
-	width: 408px;
 	transform: scale(.5);
+	width: 408px;
+}
+.the-eyes__version {
+	position: absolute;
+	right: 0;
+	top: 100%;
+	margin: 8px 0 0;
+	font-size: 20px;
+	font-weight: normal;
+	opacity: .5;
+	font-family: arial, sans-serif;
 }
 .the-eyes__eye {
-	background: white;
+	background-color: #ffffff;
+	border-radius: 100%;
 	height: 72px;
 	left: 50%;
+	overflow: hidden;
 	position: absolute;
 	top: 51%;
 	transform: translate(-50%, -50%);
 	width: 110px;
-	clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
-	transition: clip-path ease;
 }
 .the-eyes__eye--blinking {
-	animation-name: blinking;
 	animation-duration: 1200ms;
 	animation-iteration-count: 1;
+	animation-name: blinking;
 }
+
 .the-eyes__eyeball {
 	height: 72px;
 	left: 50%;
@@ -49,19 +60,19 @@
 }
 
 @keyframes blinking {
-  0% {
-		clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
-  }
-  15% {
-		clip-path: path('M54.5,36 C79.3333333,36 108.5,35 109,36 C108.5,37 79.3333333,36 54.5,36 C29.6666667,36 0.5,37 0,36 C0.5,35 29.6666667,36 54.5,36 Z');
+	0% {
+		height: 72px;
+	}
+	15% {
+		height: 0;
 	}
 	35% {
-		clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
+		height: 72px;
 	}
 	55% {
-		clip-path: path('M54.5,36 C79.3333333,36 108.5,35 109,36 C108.5,37 79.3333333,36 54.5,36 C29.6666667,36 0.5,37 0,36 C0.5,35 29.6666667,36 54.5,36 Z');
+		height: 0;
 	}
 	100% {
-		clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
+		height: 72px;
 	}
 }
