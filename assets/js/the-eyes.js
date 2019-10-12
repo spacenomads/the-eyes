@@ -24,10 +24,8 @@ function lookAtTheCursor() {
 	const xFix = getXtoCenter();
 	const yFix = getYtoCenter();
 
-
-
 	let x = (event.clientX * 100 / window.innerWidth) + xFix;
-	if (x >= 70.5) {x= 70.5;}
+	if (x >= 80) {x= 80;}
 	let y = (event.clientY * 100 / window.innerHeight) + yFix;
 	if (y >= 86.6) {y= 86.6;}
 
