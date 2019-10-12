@@ -10,34 +10,33 @@
 	background: url(../img/the-eyes.svg) center center no-repeat #ffffff;
 	height: 369px;
 	position: relative;
-	width: 408px;
 	transform: scale(.5);
+	width: 408px;
 }
-.the-eyes__eye {
-
-	height: 72px;
-
-	position: relative;
-
-	width: 110px;
-	-webkit-clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
-	clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
-	transition: clip-path ease .5s;
-}
-.the-eyes__eye--blinking {
-	animation-name: blinking;
-	animation-duration: 1200ms;
-	animation-iteration-count: 1;
-}
-.the-eyes__eyeball {
-	height: 72px;
+.the-eyes__container {
 	left: 50%;
 	position: absolute;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	width: 110px;
+	top: 51%;
+	transform: translate(-50%, -50%);
 }
-.the-eyes__eyeball-item {
+.the-eyes__container svg {
+	position: relative;
+}
+.the-eyes__eye {
+	height: 72px;
+	position: relative;
+	transition: clip-path ease .5s;
+	width: 110px;
+
+	-webkit-clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
+	clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
+}
+.the-eyes__eye--blinking {
+	animation-duration: 1200ms;
+	animation-iteration-count: 1;
+	animation-name: blinking;
+}
+.the-eyes__eyeball {
 	background: #2c2c2c;
 	border-radius: 50%;
 	height: 42px;
@@ -47,11 +46,11 @@
 }
 
 @keyframes blinking {
-  0% {
+	0% {
 		-webkit-clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
 		clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
 	}
-  15% {
+	15% {
 		-webkit-clip-path: path('M54.5,36 C79.3333333,36 108.5,35 109,36 C108.5,37 79.3333333,36 54.5,36 C29.6666667,36 0.5,37 0,36 C0.5,35 29.6666667,36 54.5,36 Z');
 		clip-path: path('M54.5,36 C79.3333333,36 108.5,35 109,36 C108.5,37 79.3333333,36 54.5,36 C29.6666667,36 0.5,37 0,36 C0.5,35 29.6666667,36 54.5,36 Z');
 	}
@@ -67,15 +66,4 @@
 		-webkit-clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
 		clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
 	}
-}
-
-
-.the-eyes__container {
-	position: absolute;
-	left: 50%;
-	top: 51%;
-	transform: translate(-50%, -50%);
-}
-.the-eyes__container svg {
-	position: relative;
 }
