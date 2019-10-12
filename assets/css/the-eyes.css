@@ -1,9 +1,9 @@
 .app {
-	align-items: flex-start;
+	align-items: center;
 	background: #e4e5e6;
 	display: flex;
 	height: 100vh;
-	justify-content: flex-start;
+	justify-content: center;
 	margin: 0;
 }
 .the-eyes {
@@ -18,7 +18,6 @@
 	height: 72px;
 
 	position: relative;
-	fill: red;
 
 	width: 110px;
 	-webkit-clip-path: path('M54.5,0 C79.3333333,0 97.5,12 109,36 C97.5,60 79.3333333,72 54.5,72 C29.6666667,72 11.5,60 0,36 C11.5,12 29.6666667,0 54.5,0 Z');
@@ -42,10 +41,8 @@
 	background: #2c2c2c;
 	border-radius: 50%;
 	height: 42px;
-	left: 50%;
 	position: absolute;
-	top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(52%,53%);
 	width: 42px;
 }
 
@@ -78,4 +75,7 @@
 	left: 50%;
 	top: 51%;
 	transform: translate(-50%, -50%);
+}
+.the-eyes__container svg {
+	position: relative;
 }

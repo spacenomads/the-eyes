@@ -9,22 +9,17 @@
 </head>
 <body class="app">
 	<div class="the-eyes">
-		<!--div class="the-eyes__eye js__eye">
-			<div class="the-eyes__eyeball">
-				<div class="the-eyes__eyeball-item js__eyeball"></div>
-			</div>
-		</div-->
-<div class="the-eyes__container">
-	<svg width="110px" height="72px" viewBox="0 0 110 72">
-
-		<rect id="path-1" x="0" y="0" width="110" height="72" class="the-eyes__eye js__eye" ></rect>
-	</svg>
-</div>
-
-
-
+		<div class="the-eyes__container">
+			<svg width="110px" height="72px" viewBox="0 0 110 72" >
+				<mask id="mask-2" fill="white">
+					<rect id="path-1" x="0" y="0" fill="white" width="110" height="72" class="the-eyes__eye js__eye"></rect>
+					<circle id="#eyeball" fill="black"  r="21" class="the-eyes__eyeball-item js__eyeball"></circle>
+				</mask>
+				<rect id="path-2" x="0" y="0" fill="red" width="110" height="72" class="the-eyes__eye js__eye"></rect>
+				<use id="Rectangle" fill="white" xlink:href="#path-1" mask=url(#mask-2)></use>
+			</svg>
+		</div>
 	</div>
-
 	<script src="assets/js/the-eyes.js"></script>
 </body>
 </html>
